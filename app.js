@@ -9,6 +9,7 @@ var port = process.env.PORT || 8080;
 
 app.set('views', 'views');
 app.set('view engine', 'jade');
+app.use(express.static(__dirname + '/Common'));
 
 app.get('/', function(req, res) {
     res.render('home', {
