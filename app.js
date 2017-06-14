@@ -22,6 +22,7 @@ app.post("/sftest", function(req, res) {
   console.log(req);
 
   var bodyArray = req.body.signed_request.split(".");
+  cosole.log("body array value  " + bodyArray);
   var consumerSecret = bodyArray[0];
   console.log("Consumer Secret is " + consumerSecret);
   var encoded_envelope = bodyArray[1];
@@ -39,6 +40,7 @@ app.get("/sftest", function(req, res) {
   console.log(req);
 
   var bodyArray = req.body.signed_request.split(".");
+  cosole.log("body array value2  " + bodyArray);
   var consumerSecret = bodyArray[0];
   console.log("Consumer Secret is " + consumerSecret);
   var encoded_envelope = bodyArray[1];
